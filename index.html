@@ -4,10 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DeveloperPage</title>
+    <!--Primero se pone normalize-->
+    <link rel="preload" href="css/normalize.css" as="style"></link>
+    <link rel="stylesheet" href="css/normalize.css">
+
+    <!--Nuestro propio css-->
+    <link rel="preload" href="css/style.css" as="style"></link>
+    <link rel="stylesheet" href="css/style.css">
 </head>
     <body>
         <header>
-            <h1>Juan Jose Zapata Buenfil</h1>
+            <h1 class="my-title">Juan Jose Zapata Buenfil <span>Developer</span></h1>
         </header>
         <nav>
             <a href="#">Inicio</a>
@@ -117,11 +124,35 @@
                 </p>
             </section>
         </main>
-        <section>
-            <h2>Contactos</h2>
-            <footer>
-                <p>Todos los derechos reservados ©</p>
-            </footer>
-        </section>
+    <section>
+        <h2>Contacto</h2>
+        <form>
+          <fieldset >
+            <legend>Llena tus datos de contacto</legend>
+            <div>
+              <label for="">Nombre</label>
+              <input type="text" placeholder="Nombre completo">
+            </div>
+
+            <div>
+            <label for="">Teléfono</label>
+            <input type="tel" placeholder="Tu numero telefonico">
+            </div>
+
+            <div>
+            <label for="">Email</label>
+            <input type="email" placeholder="Tu correo electronico">
+            </div>
+
+
+            <div>
+            <label for="">Mensaje</label>
+            <textarea></textarea>
+
+            </div>
+            <div><input type="submit" value="Enviar"></div>
+        </fieldset>
+        </form>
+    </section>
     </body>
 </html>
