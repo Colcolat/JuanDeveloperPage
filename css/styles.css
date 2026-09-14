@@ -24,6 +24,12 @@ body{
     color: aquamarine;
 }
 
+@media (min-width: 780px){
+    .navegacion-principal{
+        flex-direction: row;
+    }
+}
+
 .navegacion-principal {
     background-color: var(--secundario);
     /*Margin es por fuera y padding es por dentro*/
@@ -31,6 +37,7 @@ body{
     justify-content: space-between;
     font-weight: bold; /* En negritas */
     font-size: 2rem;
+    align-items: center;
 }
 
 .navegacion-principal a:hover{
@@ -47,11 +54,34 @@ body{
 .contenedor {
     width: 120rem;
     margin: 0 auto;
-    
-
 }
 
 .nav-bg{
     background-color: var(--secundario);
 }
 
+.hero{
+    background-image: url("../imagen.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 450px;
+    position: relative;
+    color: var(--blanco);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;   
+    text-align: center;   
+}
+
+.contenido-hero p,
+.contenido-hero h2{
+    color: (var(--blanco));
+}
+
+.ubicación{
+    display: flex;
+    align-items: flex-end;
+}
