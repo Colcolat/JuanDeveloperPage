@@ -1,87 +1,140 @@
-:root{
-    --blanco: #ffffff;
-    --oscuro: #212121;
-    --primario: #ffc107;
-    --secundario: #0097a7;
-    --gris: #757575;
+:root {
+  --blanco: #ffffff;
+  --oscuro: #212121;
+  --primario: #ffc107;
+  --secundario: #0097a7;
+  --gris: #757575;
+  --grisClaro: #b6b6b6;
 }
 
-html{
-    font-size: 62.5%;
+/* Truco para uniformidad de texto entre navegadores */
+html {
+  font-size: 62.5%;
 }
 
-body{
-    font-size: 16px;
+body {
+  font-size: 16px;
+  font-family: "Krub", sans-serif;
+  background-image: linear-gradient(
+    to top,
+    var(--grisClaro) 0%,
+    var(--blanco) 100%
+  );
 }
 
-.my-title{
-    text-align: center;
-    font-size: 3.8rem;
+/* Tipografía */
+h1 {
+  font-size: 3.8rem;
 }
 
-.my-title span{
-    font-size: 2.5rem;
-    color: aquamarine;
+h2 {
+  font-size: 2.8rem;
 }
 
-@media (min-width: 780px){
-    .navegacion-principal{
-        flex-direction: row;
-    }
+h3 {
+  font-size: 1.8rem;
+}
+
+h1,
+h2,
+h3 {
+  text-align: center;
+}
+
+.my-title {
+  text-align: center;
+  font-size: 3.8rem;
+}
+
+.my-title span {
+  font-size: 2.5rem;
+  color: aquamarine;
 }
 
 .navegacion-principal {
-    background-color: var(--secundario);
-    /*Margin es por fuera y padding es por dentro*/
-    display: flex; /* Flexbox es para alinear elementos*/
-    justify-content: space-between;
-    font-weight: bold; /* En negritas */
-    font-size: 2rem;
-    align-items: center;
+  /* Margin es por fuera y padding es por dentro */
+  display: flex; /* Flexbox está diseñado para alinear elementos */
+  flex-direction: column;
+  justify-content: space-between;
+  font-weight: bold;
+  font-size: 2rem;
+  align-items: center;
 }
 
-.navegacion-principal a:hover{
-    background-color: var(--primario);
-    color: var(--oscuro);
+@media (min-width: 768px) {
+  .navegacion-principal {
+    flex-direction: row;
+  }
 }
 
-.navegacion-principal a{
-    color: var(--blanco);
-    text-decoration: none; /* Remueve el subrayado */
-    padding: 1rem;
+/* Al poner el cursor en el hipervínculo */
+.navegacion-principal a:hover {
+  background-color: var(--primario);
+  color: var(--oscuro);
+}
+
+.navegacion-principal a {
+  color: var(--blanco);
+  text-decoration: none; /* Remueve el subrayado */
+  padding: 1rem;
 }
 
 .contenedor {
-    width: 120rem;
-    margin: 0 auto;
+  max-width: 120rem; /* 1200 pixeles porque 1 rem = 10px */
+  margin: 0 auto;
 }
 
-.nav-bg{
-    background-color: var(--secundario);
+.nav-bg {
+  background-color: var(--secundario);
 }
 
-.hero{
-    background-image: url("../imagen.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    height: 450px;
-    position: relative;
-    color: var(--blanco);
+.hero {
+  background-image: url("../imagen.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 450px;
+  position: relative;
+}
 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;   
-    text-align: center;   
+.contenido-hero {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  height: 100%;
+  /* Alinear vertical y horizontalmente */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .contenido-hero p,
-.contenido-hero h2{
-    color: (var(--blanco));
+.contenido-hero h2 {
+  color: var(--blanco);
 }
 
-.ubicación{
-    display: flex;
-    align-items: flex-end;
+.ubicacion,
+.ubicación {
+  display: flex;
+  align-items: flex-end;
+}
+
+.boton {
+  background-color: var(--secundario);
+  color: var(--blanco);
+  text-transform: uppercase; /* Convertir el texto en mayúsculas */
+  text-decoration: none;
+  font-weight: bold;
+  padding: 1rem 3rem;
+  margin-top: 3rem;
+  border-radius: 0.5rem;
+  width: 90%;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .boton {
+    width: auto;
+  }
 }
